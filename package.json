@@ -1,0 +1,13 @@
+{
+  "name": "when-s-my-bin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UK bin collection day lookup — postcode to council to live bin dates.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
