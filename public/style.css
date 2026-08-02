@@ -542,6 +542,19 @@ section h2 {
   }
 }
 
+.map-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
+
 .council-notes ul {
   margin: 0;
   padding-left: 20px;

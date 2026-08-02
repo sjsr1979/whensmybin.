@@ -91,6 +91,7 @@ module.exports = [
     ],
     contactPhone: "0300 123 5011",
     officialUrl: "https://www.cheshireeast.gov.uk/waste_and_recycling/bins/bin-collection-days.aspx",
+    mapBbox: "-2.7529286,52.9472122,-1.9747864,53.3874449",
     towns: [
       {
         slug: "holmes-chapel",
@@ -121,6 +122,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Westminster",
     officialUrl: "https://www.westminster.gov.uk/recycling-and-rubbish-collections/how-we-collect-your-mixed-rubbish-and-recycling",
+    mapBbox: "-0.1365398,51.4904439,-0.1165398,51.5104439",
   },
   {
     slug: "nottingham",
@@ -128,6 +130,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Nottingham",
     officialUrl: "https://www.nottinghamcity.gov.uk/information-for-residents/bin-and-rubbish-collections/household-waste/",
+    mapBbox: "-1.2469560,52.8890083,-1.0861189,53.0186721",
   },
   {
     slug: "sheffield",
@@ -135,6 +138,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Sheffield",
     officialUrl: "https://www.sheffield.gov.uk/bins-waste-recycling/about-your-bins",
+    mapBbox: "-1.8014715,53.3045116,-1.3246685,53.5031042",
   },
   {
     slug: "oxford",
@@ -142,6 +146,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Oxford",
     officialUrl: "https://www.oxford.gov.uk/mybinday",
+    mapBbox: "-1.3042472,51.7109788,-1.1758134,51.7962658",
   },
   {
     slug: "cornwall",
@@ -149,6 +154,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Cornwall",
     officialUrl: "https://www.cornwall.gov.uk/rubbish-recycling-and-waste/rubbish/household-rubbish-collections/",
+    mapBbox: "-5.7471061,49.9554137,-4.1649444,50.9312729",
   },
   {
     slug: "derby",
@@ -156,6 +162,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Derby",
     officialUrl: "https://www.derby.gov.uk/environment-and-planning/recycling-and-waste/your-bin-collections/all-about-your-bin-day/when-is-my-bin-day/",
+    mapBbox: "-1.5568570,52.8610342,-1.3830729,52.9681324",
   },
   {
     slug: "leicester",
@@ -163,6 +170,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Leicester",
     officialUrl: "https://www.leicester.gov.uk/bins-waste-and-recycling/household-waste-and-recycling-collections",
+    mapBbox: "-1.2931969,52.4762000,-0.9731969,52.7962000",
   },
   {
     slug: "swansea",
@@ -170,6 +178,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Swansea",
     officialUrl: "https://www.swansea.gov.uk/article/999/Recycling-and-rubbish",
+    mapBbox: "-4.1059248,51.4595955,-3.7859248,51.7795955",
   },
   {
     slug: "glasgow-city",
@@ -177,6 +186,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Glasgow City",
     officialUrl: "https://www.glasgow.gov.uk/collectiondays",
+    mapBbox: "-4.3932006,55.7812791,-4.0717169,55.9296388",
   },
   {
     slug: "newcastle-upon-tyne",
@@ -184,6 +194,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Newcastle upon Tyne",
     officialUrl: "https://new.newcastle.gov.uk/recycling-waste/check-your-bin-collection-day",
+    mapBbox: "-1.7756721,54.9590320,-1.5292003,55.0793823",
   },
   {
     slug: "liverpool",
@@ -191,6 +202,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Liverpool",
     officialUrl: "https://liverpool.gov.uk/bins-and-recycling/bin-collections/",
+    mapBbox: "-3.0191726,53.3115427,-2.8180003,53.4749885",
   },
   {
     slug: "bristol",
@@ -198,6 +210,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Bristol, City of",
     officialUrl: "https://www.bristol.gov.uk/residents/bins-and-recycling",
+    mapBbox: "-3.1178243,51.3416261,-2.5104192,51.5444317",
   },
   {
     slug: "cambridge",
@@ -205,6 +218,7 @@ module.exports = [
     supported: false,
     adminDistrict: "Cambridge",
     officialUrl: "https://www.greatercambridgewaste.org/find-your-bin-collection-day",
+    mapBbox: "0.0686389,52.1579417,0.1845520,52.2372296",
   },
   {
     slug: "york",
@@ -212,6 +226,7 @@ module.exports = [
     supported: false,
     adminDistrict: "York",
     officialUrl: "https://www.york.gov.uk/WasteCollectionCalendar",
+    mapBbox: "-1.2237120,53.8745672,-0.9196707,54.0568664",
   },
 ];
 
