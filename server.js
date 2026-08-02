@@ -209,6 +209,7 @@ const server = http.createServer(async (req, res) => {
         ...result,
         supported: !!(match && match.supported),
         slug: match ? match.slug : null,
+        officialUrl: match ? match.officialUrl : null,
       });
     }
 

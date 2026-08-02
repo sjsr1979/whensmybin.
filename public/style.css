@@ -172,6 +172,18 @@ h1 {
   color: #c2453a;
 }
 
+.status-line.confirm {
+  padding: 14px 18px;
+  background: var(--bg-subtle);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.confirm-link {
+  font-weight: 650;
+  color: var(--primary);
+}
+
 .official-link-card {
   margin-top: 20px;
   padding: 22px 24px;

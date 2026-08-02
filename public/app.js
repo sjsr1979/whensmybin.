@@ -10,6 +10,7 @@ function setStatus(text, isError = false) {
   statusLine.textContent = text;
   statusLine.hidden = !text;
   statusLine.classList.toggle("error", isError);
+  statusLine.classList.remove("confirm");
 }
 
 function resetDownstream() {
@@ -92,7 +93,14 @@ async function handlePostcode(postcode) {
     }
 
     if (!councilData.supported) {
-      setStatus(`${postcode.toUpperCase()} is in ${councilData.council} — use the official checker above for your bin day.`, true);
+      if (councilData.officialUrl) {
+        statusLine.innerHTML = `${postcode.toUpperCase()} is in <strong>${councilData.council}</strong>. <a class="confirm-link" href="${councilData.officialUrl}" target="_blank" rel="noreferrer">Go to ${councilData.council}'s official bin checker →</a>`;
+      } else {
+        statusLine.textContent = `${postcode.toUpperCase()} is in ${councilData.council}.`;
+      }
+      statusLine.hidden = false;
+      statusLine.classList.remove("error");
+      statusLine.classList.add("confirm");
       return;
     }
 
