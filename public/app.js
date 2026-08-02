@@ -34,37 +34,16 @@ function relativeLabel(dateStr) {
   return null;
 }
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  resetDownstream();
+function currentCouncilSlug() {
+  const match = window.location.pathname.match(/^\/council\/([^/]+)/);
+  return match ? match[1] : null;
+}
 
-  const postcode = postcodeInput.value.trim();
-  if (!postcode) return;
-
+async function lookupAddresses(postcode) {
   submitBtn.disabled = true;
-  setStatus("Looking up your council…");
+  setStatus("Finding addresses…");
 
   try {
-    const councilRes = await fetch(`/api/council?postcode=${encodeURIComponent(postcode)}`);
-    const councilData = await councilRes.json();
-
-    if (!councilRes.ok) {
-      setStatus("Couldn't find that postcode. Check it and try again.", true);
-      return;
-    }
-
-    if (!councilData.supported) {
-      if (councilData.slug) {
-        statusLine.innerHTML = `${postcode.toUpperCase()} is in ${councilData.council}. We don't have live data for it yet — <a href="/council/${councilData.slug}">see the ${councilData.council} page</a> for their official bin lookup.`;
-        statusLine.hidden = false;
-        statusLine.classList.add("error");
-      } else {
-        setStatus(`${postcode.toUpperCase()} is in ${councilData.council}. We don't have this council on the site yet.`, true);
-      }
-      return;
-    }
-
-    setStatus("Finding addresses…");
     const addrRes = await fetch(`/api/addresses?postcode=${encodeURIComponent(postcode)}`);
     const addrData = await addrRes.json();
 
@@ -86,6 +65,51 @@ form.addEventListener("submit", async (e) => {
   } finally {
     submitBtn.disabled = false;
   }
+}
+
+async function handlePostcode(postcode) {
+  resetDownstream();
+  submitBtn.disabled = true;
+  setStatus("Looking up your council…");
+
+  try {
+    const councilRes = await fetch(`/api/council?postcode=${encodeURIComponent(postcode)}`);
+    const councilData = await councilRes.json();
+
+    if (!councilRes.ok) {
+      setStatus("Couldn't find that postcode. Check it and try again.", true);
+      return;
+    }
+
+    if (!councilData.slug) {
+      setStatus(`${postcode.toUpperCase()} is in ${councilData.council}. We don't have this council on the site yet.`, true);
+      return;
+    }
+
+    if (councilData.slug !== currentCouncilSlug()) {
+      window.location.href = `/council/${councilData.slug}?postcode=${encodeURIComponent(postcode)}`;
+      return;
+    }
+
+    if (!councilData.supported) {
+      setStatus(`${postcode.toUpperCase()} is in ${councilData.council} — use the official checker above for your bin day.`, true);
+      return;
+    }
+
+    await lookupAddresses(postcode);
+  } catch (err) {
+    console.error(err);
+    setStatus("Something went wrong. Try again.", true);
+  } finally {
+    submitBtn.disabled = false;
+  }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const postcode = postcodeInput.value.trim();
+  if (!postcode) return;
+  handlePostcode(postcode);
 });
 
 addressSelect.addEventListener("change", async () => {
@@ -135,3 +159,13 @@ addressSelect.addEventListener("change", async () => {
     resultsEl.innerHTML = `<p class="status-line">Couldn't load collection dates.</p>`;
   }
 });
+
+// If we arrived here with a postcode carried over from another page
+// (e.g. redirected from the homepage), pick up where the user left off.
+(function autoContinueFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  const postcode = params.get("postcode");
+  if (!postcode) return;
+  postcodeInput.value = postcode;
+  handlePostcode(postcode);
+})();
