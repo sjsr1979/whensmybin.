@@ -6,7 +6,7 @@ const path = require("path");
 const councils = require("./data/councils");
 const { renderHome, renderCouncilPage, renderTownPage } = require("./lib/pages");
 
-const PORT = 4173;
+const PORT = process.env.PORT || 4173;
 const PUBLIC_DIR = path.join(__dirname, "public");
 
 const BIN_META = {
