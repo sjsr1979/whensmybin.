@@ -90,6 +90,7 @@ module.exports = [
       },
     ],
     contactPhone: "0300 123 5011",
+    address: "Delamere House, Delamere Street, Crewe, CW1 2LL",
     officialUrl: "https://www.cheshireeast.gov.uk/waste_and_recycling/bins/bin-collection-days.aspx",
     mapBbox: "-2.7529286,52.9472122,-1.9747864,53.3874449",
     towns: [
