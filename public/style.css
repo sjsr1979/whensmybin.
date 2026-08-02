@@ -1,29 +1,29 @@
 :root {
   --bg: #fafaf9;
   --bg-raised: #ffffff;
-  --bg-subtle: #f2f1ee;
-  --border: #e7e5e1;
-  --text: #1c1c1a;
-  --text-muted: #6b6a66;
-  --text-soft: #9a9893;
-  --primary: #1f6f4e;
-  --primary-hover: #185a3f;
+  --bg-subtle: #f0f2ee;
+  --border: #e2e6df;
+  --text: #1d2c32;
+  --text-muted: #4d5d5f;
+  --text-soft: #7c8a8a;
+  --primary: #4c8a30;
+  --primary-hover: #3c7024;
   --primary-foreground: #ffffff;
-  --shadow: 0 1px 2px rgba(20, 20, 15, 0.04), 0 8px 24px rgba(20, 20, 15, 0.06);
+  --shadow: 0 1px 2px rgba(20, 30, 20, 0.05), 0 8px 24px rgba(20, 30, 20, 0.07);
   --radius: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #161614;
-    --bg-raised: #1e1e1b;
-    --bg-subtle: #232320;
-    --border: #313029;
-    --text: #f2f1ec;
-    --text-muted: #b3b1aa;
-    --text-soft: #7d7b74;
-    --primary: #4caf7d;
-    --primary-hover: #5fc491;
+    --bg: #14181a;
+    --bg-raised: #1c2224;
+    --bg-subtle: #202826;
+    --border: #2e3a37;
+    --text: #eef2ef;
+    --text-muted: #adbab8;
+    --text-soft: #758482;
+    --primary: #7dc158;
+    --primary-hover: #92d16d;
     --primary-foreground: #0d160f;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
   }
@@ -66,7 +66,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  height: 92px;
+  height: 116px;
 }
 
 .brand {
@@ -76,7 +76,7 @@ body {
 }
 
 .brand-logo {
-  height: 76px;
+  height: 100px;
   width: auto;
   display: block;
 }
@@ -91,7 +91,7 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 650;
   letter-spacing: -0.02em;
   margin: 0 0 16px;
@@ -99,7 +99,7 @@ h1 {
 }
 
 .lede {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
   max-width: 46ch;
   margin: 0 0 32px;
@@ -562,6 +562,18 @@ section h2 {
   color: var(--text-muted);
   display: grid;
   gap: 8px;
+}
+
+.generic-bin-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-muted);
+  display: grid;
+  gap: 10px;
+}
+
+.generic-bin-list strong {
+  color: var(--text);
 }
 
 .faq-item + .faq-item {
