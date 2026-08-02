@@ -113,14 +113,16 @@ h1 {
 }
 
 #postcode {
-  height: 48px;
+  height: 56px;
   border-radius: 10px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--primary);
   background: var(--bg-raised);
   color: var(--text);
-  padding: 0 16px;
-  font-size: 1rem;
+  padding: 0 18px;
+  font-size: 1.15rem;
+  font-weight: 600;
   outline: none;
+  box-shadow: 0 0 0 4px rgba(76, 138, 48, 0.12);
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
@@ -130,13 +132,13 @@ h1 {
 }
 
 .lookup-form button {
-  height: 48px;
-  padding: 0 22px;
+  height: 56px;
+  padding: 0 24px;
   border-radius: 10px;
   border: none;
   background: var(--primary);
   color: var(--primary-foreground);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.15s;
@@ -291,22 +293,6 @@ h1 {
   font-size: 0.85rem;
   color: var(--text-soft);
   max-width: 60ch;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 18px;
-  margin-bottom: 14px;
-  font-size: 0.85rem;
-}
-
-.footer-links-label {
-  color: var(--text-soft);
-}
-
-.footer-links a {
-  color: var(--primary);
 }
 
 /* Full-bleed breadcrumb bar */
@@ -564,16 +550,64 @@ section h2 {
   gap: 8px;
 }
 
-.generic-bin-list {
-  margin: 0;
-  padding-left: 20px;
-  color: var(--text-muted);
+.generic-bin-grid {
   display: grid;
-  gap: 10px;
+  gap: 14px;
 }
 
-.generic-bin-list strong {
-  color: var(--text);
+.generic-bin-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.generic-bin-label {
+  font-weight: 650;
+  margin: 0 0 2px;
+}
+
+.generic-bin-detail {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.92rem;
+  max-width: 55ch;
+}
+
+/* Sidebar official-link CTA and reading list */
+.sidebar-official-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 10px;
+  font-weight: 650;
+  font-size: 0.92rem;
+  margin-bottom: 20px;
+}
+
+.sidebar-official-link:hover {
+  background: var(--primary-hover);
+}
+
+.sidebar-official-arrow {
+  flex-shrink: 0;
+}
+
+.sidebar-reading {
+  margin-top: 24px;
+}
+
+.home-reading {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
 }
 
 .faq-item + .faq-item {
