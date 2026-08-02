@@ -201,8 +201,12 @@ const server = http.createServer(async (req, res) => {
       const postcode = url.searchParams.get("postcode") || "";
       const result = await resolveCouncil(postcode);
       if (!result) return sendJson(res, 404, { error: "Postcode not found" });
-      const supported = result.council === "Cheshire East";
-      return sendJson(res, 200, { ...result, supported });
+      const match = councils.find((c) => c.adminDistrict === result.council);
+      return sendJson(res, 200, {
+        ...result,
+        supported: !!(match && match.supported),
+        slug: match ? match.slug : null,
+      });
     }
 
     if (url.pathname === "/api/addresses") {

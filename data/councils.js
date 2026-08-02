@@ -112,6 +112,107 @@ module.exports = [
       },
     ],
   },
+  // Link-through only — official URL verified working, but no real scraper
+  // or researched bin-contents data yet. supported: false shows the
+  // official council link instead of the live lookup widget.
+  {
+    slug: "westminster",
+    name: "Westminster",
+    supported: false,
+    adminDistrict: "Westminster",
+    officialUrl: "https://www.westminster.gov.uk/recycling-and-rubbish-collections/how-we-collect-your-mixed-rubbish-and-recycling",
+  },
+  {
+    slug: "nottingham",
+    name: "Nottingham",
+    supported: false,
+    adminDistrict: "Nottingham",
+    officialUrl: "https://www.nottinghamcity.gov.uk/information-for-residents/bin-and-rubbish-collections/household-waste/",
+  },
+  {
+    slug: "sheffield",
+    name: "Sheffield",
+    supported: false,
+    adminDistrict: "Sheffield",
+    officialUrl: "https://www.sheffield.gov.uk/bins-waste-recycling/about-your-bins",
+  },
+  {
+    slug: "oxford",
+    name: "Oxford",
+    supported: false,
+    adminDistrict: "Oxford",
+    officialUrl: "https://www.oxford.gov.uk/mybinday",
+  },
+  {
+    slug: "cornwall",
+    name: "Cornwall",
+    supported: false,
+    adminDistrict: "Cornwall",
+    officialUrl: "https://www.cornwall.gov.uk/rubbish-recycling-and-waste/rubbish/household-rubbish-collections/",
+  },
+  {
+    slug: "derby",
+    name: "Derby",
+    supported: false,
+    adminDistrict: "Derby",
+    officialUrl: "https://www.derby.gov.uk/environment-and-planning/recycling-and-waste/your-bin-collections/all-about-your-bin-day/when-is-my-bin-day/",
+  },
+  {
+    slug: "leicester",
+    name: "Leicester",
+    supported: false,
+    adminDistrict: "Leicester",
+    officialUrl: "https://www.leicester.gov.uk/bins-waste-and-recycling/household-waste-and-recycling-collections",
+  },
+  {
+    slug: "swansea",
+    name: "Swansea",
+    supported: false,
+    adminDistrict: "Swansea",
+    officialUrl: "https://www.swansea.gov.uk/article/999/Recycling-and-rubbish",
+  },
+  {
+    slug: "glasgow-city",
+    name: "Glasgow City",
+    supported: false,
+    adminDistrict: "Glasgow City",
+    officialUrl: "https://www.glasgow.gov.uk/collectiondays",
+  },
+  {
+    slug: "newcastle-upon-tyne",
+    name: "Newcastle upon Tyne",
+    supported: false,
+    adminDistrict: "Newcastle upon Tyne",
+    officialUrl: "https://new.newcastle.gov.uk/recycling-waste/check-your-bin-collection-day",
+  },
+  {
+    slug: "liverpool",
+    name: "Liverpool",
+    supported: false,
+    adminDistrict: "Liverpool",
+    officialUrl: "https://liverpool.gov.uk/bins-and-recycling/bin-collections/",
+  },
+  {
+    slug: "bristol",
+    name: "Bristol, City of",
+    supported: false,
+    adminDistrict: "Bristol, City of",
+    officialUrl: "https://www.bristol.gov.uk/residents/bins-and-recycling",
+  },
+  {
+    slug: "cambridge",
+    name: "Cambridge",
+    supported: false,
+    adminDistrict: "Cambridge",
+    officialUrl: "https://www.greatercambridgewaste.org/find-your-bin-collection-day",
+  },
+  {
+    slug: "york",
+    name: "York",
+    supported: false,
+    adminDistrict: "York",
+    officialUrl: "https://www.york.gov.uk/WasteCollectionCalendar",
+  },
 ];
 
 function findBySlug(slug) {

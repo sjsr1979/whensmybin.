@@ -54,10 +54,13 @@ form.addEventListener("submit", async (e) => {
     }
 
     if (!councilData.supported) {
-      setStatus(
-        `${postcode.toUpperCase()} is in ${councilData.council}. This demo only has real data wired up for Cheshire East so far.`,
-        true
-      );
+      if (councilData.slug) {
+        statusLine.innerHTML = `${postcode.toUpperCase()} is in ${councilData.council}. We don't have live data for it yet — <a href="/council/${councilData.slug}">see the ${councilData.council} page</a> for their official bin lookup.`;
+        statusLine.hidden = false;
+        statusLine.classList.add("error");
+      } else {
+        setStatus(`${postcode.toUpperCase()} is in ${councilData.council}. We don't have this council on the site yet.`, true);
+      }
       return;
     }
 
