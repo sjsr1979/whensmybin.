@@ -7,6 +7,7 @@ module.exports = [
   {
     slug: "cheshire-east",
     name: "Cheshire East",
+    officialName: "Cheshire East Council",
     supported: true,
     adminDistrict: "Cheshire East", // must match ONS admin_district exactly
     population: "398,800",
@@ -120,6 +121,7 @@ module.exports = [
   {
     slug: "westminster",
     name: "Westminster",
+    officialName: "Westminster City Council",
     supported: false,
     adminDistrict: "Westminster",
     officialUrl: "https://www.westminster.gov.uk/recycling-and-rubbish-collections/how-we-collect-your-mixed-rubbish-and-recycling",
@@ -128,6 +130,7 @@ module.exports = [
   {
     slug: "nottingham",
     name: "Nottingham",
+    officialName: "Nottingham City Council",
     supported: false,
     adminDistrict: "Nottingham",
     officialUrl: "https://www.nottinghamcity.gov.uk/information-for-residents/bin-and-rubbish-collections/household-waste/",
@@ -136,6 +139,7 @@ module.exports = [
   {
     slug: "sheffield",
     name: "Sheffield",
+    officialName: "Sheffield City Council",
     supported: false,
     adminDistrict: "Sheffield",
     officialUrl: "https://www.sheffield.gov.uk/bins-waste-recycling/about-your-bins",
@@ -144,6 +148,7 @@ module.exports = [
   {
     slug: "oxford",
     name: "Oxford",
+    officialName: "Oxford City Council",
     supported: false,
     adminDistrict: "Oxford",
     officialUrl: "https://www.oxford.gov.uk/mybinday",
@@ -152,6 +157,7 @@ module.exports = [
   {
     slug: "cornwall",
     name: "Cornwall",
+    officialName: "Cornwall Council",
     supported: false,
     adminDistrict: "Cornwall",
     officialUrl: "https://www.cornwall.gov.uk/rubbish-recycling-and-waste/rubbish/household-rubbish-collections/",
@@ -160,6 +166,7 @@ module.exports = [
   {
     slug: "derby",
     name: "Derby",
+    officialName: "Derby City Council",
     supported: false,
     adminDistrict: "Derby",
     officialUrl: "https://www.derby.gov.uk/environment-and-planning/recycling-and-waste/your-bin-collections/all-about-your-bin-day/when-is-my-bin-day/",
@@ -168,6 +175,7 @@ module.exports = [
   {
     slug: "leicester",
     name: "Leicester",
+    officialName: "Leicester City Council",
     supported: false,
     adminDistrict: "Leicester",
     officialUrl: "https://www.leicester.gov.uk/bins-waste-and-recycling/household-waste-and-recycling-collections",
@@ -176,6 +184,7 @@ module.exports = [
   {
     slug: "swansea",
     name: "Swansea",
+    officialName: "Swansea Council",
     supported: false,
     adminDistrict: "Swansea",
     officialUrl: "https://www.swansea.gov.uk/article/999/Recycling-and-rubbish",
@@ -184,6 +193,7 @@ module.exports = [
   {
     slug: "glasgow-city",
     name: "Glasgow City",
+    officialName: "Glasgow City Council",
     supported: false,
     adminDistrict: "Glasgow City",
     officialUrl: "https://www.glasgow.gov.uk/collectiondays",
@@ -192,6 +202,7 @@ module.exports = [
   {
     slug: "newcastle-upon-tyne",
     name: "Newcastle upon Tyne",
+    officialName: "Newcastle City Council",
     supported: false,
     adminDistrict: "Newcastle upon Tyne",
     officialUrl: "https://new.newcastle.gov.uk/recycling-waste/check-your-bin-collection-day",
@@ -200,6 +211,7 @@ module.exports = [
   {
     slug: "liverpool",
     name: "Liverpool",
+    officialName: "Liverpool City Council",
     supported: false,
     adminDistrict: "Liverpool",
     officialUrl: "https://liverpool.gov.uk/bins-and-recycling/bin-collections/",
@@ -208,6 +220,7 @@ module.exports = [
   {
     slug: "bristol",
     name: "Bristol",
+    officialName: "Bristol City Council",
     supported: false,
     adminDistrict: "Bristol, City of", // ONS admin_district name — must stay exact for postcode matching
     officialUrl: "https://www.bristol.gov.uk/residents/bins-and-recycling",
@@ -216,6 +229,7 @@ module.exports = [
   {
     slug: "cambridge",
     name: "Cambridge",
+    officialName: "Cambridge City Council",
     supported: false,
     adminDistrict: "Cambridge",
     officialUrl: "https://www.greatercambridgewaste.org/find-your-bin-collection-day",
@@ -224,6 +238,7 @@ module.exports = [
   {
     slug: "york",
     name: "York",
+    officialName: "City of York Council",
     supported: false,
     adminDistrict: "York",
     officialUrl: "https://www.york.gov.uk/WasteCollectionCalendar",
