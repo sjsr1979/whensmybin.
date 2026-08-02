@@ -161,6 +161,48 @@ h1 {
   color: #c2453a;
 }
 
+.official-link-card {
+  margin-top: 20px;
+  padding: 22px 24px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.official-link-title {
+  font-weight: 650;
+  margin: 0 0 4px;
+}
+
+.official-link-detail {
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 46ch;
+}
+
+.official-link-cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.official-link-cta:hover {
+  background: var(--primary-hover);
+}
+
 .field-block {
   margin-top: 24px;
   max-width: 480px;
