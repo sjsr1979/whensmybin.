@@ -133,22 +133,23 @@ h1 {
 
 .lookup-form button {
   height: 56px;
-  padding: 0 26px;
+  padding: 0 28px;
   border-radius: 10px;
-  border: none;
-  background: var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, var(--primary-hover) 0%, var(--primary) 60%);
   color: var(--primary-foreground);
   font-size: 1.05rem;
-  font-weight: 650;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(60, 112, 36, 0.28);
-  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset, 0 6px 16px rgba(30, 60, 15, 0.4), 0 2px 4px rgba(30, 60, 15, 0.3);
+  transition: transform 0.1s, box-shadow 0.15s, filter 0.15s;
 }
 
 .lookup-form button:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(60, 112, 36, 0.32);
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset, 0 10px 22px rgba(30, 60, 15, 0.45), 0 3px 6px rgba(30, 60, 15, 0.32);
 }
 
 .lookup-form button:active {
@@ -200,21 +201,24 @@ h1 {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
-  height: 48px;
-  padding: 0 22px;
+  text-decoration: none;
+  height: 50px;
+  padding: 0 24px;
   border-radius: 10px;
-  background: var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, var(--primary-hover) 0%, var(--primary) 60%);
   color: var(--primary-foreground);
-  font-weight: 650;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   white-space: nowrap;
-  box-shadow: 0 2px 6px rgba(60, 112, 36, 0.28);
-  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset, 0 6px 16px rgba(30, 60, 15, 0.4), 0 2px 4px rgba(30, 60, 15, 0.3);
+  transition: transform 0.1s, box-shadow 0.15s, filter 0.15s;
 }
 
 .official-link-cta:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(60, 112, 36, 0.32);
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18) inset, 0 10px 22px rgba(30, 60, 15, 0.45), 0 3px 6px rgba(30, 60, 15, 0.32);
 }
 
 .field-block {
@@ -634,6 +638,7 @@ section h2 {
 
 .pill {
   display: inline-block;
+  text-decoration: none;
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid var(--border);

@@ -207,9 +207,9 @@ module.exports = [
   },
   {
     slug: "bristol",
-    name: "Bristol, City of",
+    name: "Bristol",
     supported: false,
-    adminDistrict: "Bristol, City of",
+    adminDistrict: "Bristol, City of", // ONS admin_district name — must stay exact for postcode matching
     officialUrl: "https://www.bristol.gov.uk/residents/bins-and-recycling",
     mapBbox: "-3.1178243,51.3416261,-2.5104192,51.5444317",
   },
